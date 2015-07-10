@@ -39,6 +39,17 @@ $(document).ready(function() {
 		$(this).selectContent('.select-exp');
 	});
 
+	$('.flat-button').click(function(e) {
+		$('.flat-button').removeClass('active');
+		$(this).addClass('active');
+		$(this).selectContent('.select-list')
+	});
+
+	$('.select-list li').click(function(e) {
+		$('.select-list li').removeClass('active');
+		$(this).addClass('active');
+	});
+
 	$.fn.selectContent = function(contentClass) {
 		var index = jQuery(this).index();
 
