@@ -89,10 +89,6 @@ nav .navbar.navbar-default {
 	margin-bottom: 10px;
 }
 
-.center-text {
-	text-align: center;
-}
-
 .content hr {
 	opacity: 0.4;
 	margin: 5px 0 15px 0;
@@ -114,6 +110,10 @@ nav .navbar.navbar-default {
 	text-align: right !important;
 }
 
+.center-text {
+	text-align: center !important;
+}
+
 .select-list ul {
 	list-style: none;
 	padding: 0;
@@ -122,16 +122,13 @@ nav .navbar.navbar-default {
 	width: 90%;
 }
 
-.select-list li:hover {
+.select-list li:hover,
+.select-list li.active {
 	background-color: rgba(0, 0, 0, 0.1);
 }
 
 .select-list li {
 	cursor: pointer;
-}
-
-.select-list li.active {
-	background-color: rgba(0, 0, 0, 0.1);
 }
 
 .content .content-text {
@@ -248,8 +245,53 @@ nav .navbar.navbar-default {
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
+.icons-panel div {
+	margin: 5px;
+	padding: 0;
+	text-align: center;
+}
+
+.icons-panel span {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+
+.icons-panel a {
+	text-decoration: none;
+	color: white;
+}
+
+.icons-panel .fa-youtube-play:hover {
+	background-color: #CC181E;
+}
+
+.icons-panel .fa-deviantart:hover {
+	background-color: #04CC47;
+}
+
+.icons-panel .fa-github:hover {
+	background-color: #026291;
+}
+
+.icons-panel .fa-soundcloud:hover {
+	background-color: #FF6600; 
+}
+
 .full-height {
 	height: 100%;
+}
+
+.center.row {
+	text-align: center;
+}
+
+.center.content {
+	display: inline-block;
+	float: none;
+	text-align: left;
+	margin-right: -4px;
 }
 
 @media (min-width: 768px ) {
@@ -257,22 +299,22 @@ nav .navbar.navbar-default {
 	 	position: relative;
 	}
 
-	.bottom-content {
+	.row-bottom {
 		position: absolute;
 		bottom: 0;
 	}
 
-	.center-content {
+	.row-center {
 		position: absolute;
 		left: 50%;
 	}
 
-	.left-content {
+	.row-left {
 		position: absolute;
 		left: 0;
 	}
 
-	.right-content {
+	.row-right {
 		position: absolute;
 		right: 0;
 	}

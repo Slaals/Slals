@@ -45,9 +45,22 @@ $(document).ready(function() {
 		$(this).selectContent('.select-list')
 	});
 
-	$('.select-list li').click(function(e) {
-		$('.select-list li').removeClass('active');
+	$('.list-science li').click(function(e) {
+		$('.list-science li').removeClass('active');
 		$(this).addClass('active');
+		$(this).selectContent('.select-science');
+	});
+
+	$('.list-tech li').click(function(e) {
+		$('.list-tech li').removeClass('active');
+		$(this).addClass('active');
+		$(this).selectContent('.select-tech');
+	});
+
+	$('.list-other li').click(function(e) {
+		$('.list-other li').removeClass('active');
+		$(this).addClass('active');
+		$(this).selectContent('.select-other');
 	});
 
 	$.fn.selectContent = function(contentClass) {
