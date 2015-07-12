@@ -4,10 +4,15 @@ nav .navbar.navbar-default {
 	padding: 0;
 }
 
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
 .navbar {
 	margin: 0;
 	border: none;
-	background-color: #545454;
+	background-color: #3B5065;
 	border-radius: 0;
 }
 
@@ -32,7 +37,7 @@ nav .navbar.navbar-default {
 	color: #AAB2B4;
 	font-family: Open Sans;
 	font-size: 11pt;
-	background-color: #545454;
+	background-color: #3B5065;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -50,25 +55,26 @@ nav .navbar.navbar-default {
 }
 
 .glyphicon.glyphicon-menu-left {
-	position: relative;
-	float: right;
-	line-height: 600px;
+	display: table-cell;
+	text-align: right;
+	vertical-align: middle;
 }
 
 .glyphicon.glyphicon-menu-right {
-	position: relative;
-	float: left;
-	line-height: 600px;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .nav-panel {
+	display: table;
 	opacity: 0.25;
 	cursor: pointer;
 	background-color: white;
+	height: 100%
 }
 
 #main-content {	
-	height: 600px;			
+	height: 75%;			
 	margin: 0;
 }
 
@@ -114,7 +120,7 @@ nav .navbar.navbar-default {
 	text-align: center !important;
 }
 
-.select-list ul {
+.custom-list ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -122,13 +128,17 @@ nav .navbar.navbar-default {
 	width: 90%;
 }
 
-.select-list li:hover,
-.select-list li.active {
+.interactive-list li:hover,
+.interactive-list li.active {
 	background-color: rgba(0, 0, 0, 0.1);
 }
 
-.select-list li {
+.interactive-list li {
 	cursor: pointer;
+}
+
+.text-center {
+	text-align: center !important;
 }
 
 .content .content-text {
@@ -138,9 +148,9 @@ nav .navbar.navbar-default {
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 25px;
-	padding-right: 10px;
 	text-align: justify;
 	margin-bottom: 30px;
+	padding: 5px;
 }
 
 .right-bar {
@@ -152,11 +162,16 @@ nav .navbar.navbar-default {
 }
 
 .no-margin {
-	margin: 0;
+	margin: 0 !important;
 }
 
 .no-padding {
-	padding: 0;
+	padding: 0 !important;
+}
+
+.badge {
+	margin: 5px !important;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .interest-icon {
@@ -290,8 +305,6 @@ nav .navbar.navbar-default {
 .center.content {
 	display: inline-block;
 	float: none;
-	text-align: left;
-	margin-right: -4px;
 }
 
 @media (min-width: 768px ) {
@@ -299,23 +312,64 @@ nav .navbar.navbar-default {
 	 	position: relative;
 	}
 
-	.row-bottom {
+	.col-bottom {
 		position: absolute;
 		bottom: 0;
 	}
 
-	.row-center {
+	.col-center {
 		position: absolute;
 		left: 50%;
 	}
 
-	.row-left {
+	.col-left {
 		position: absolute;
 		left: 0;
 	}
 
-	.row-right {
+	.col-right {
 		position: absolute;
 		right: 0;
 	}
+}
+
+.flat-image {
+	border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-image {
+	height: auto;
+	width: 175px;
+}
+
+.progress.vertical {
+	position: relative;
+    width: 30px;
+    margin-bottom: 0;
+    background-color: transparent;
+    color: black;
+   	border: none;
+    box-shadow: none;
+    min-height: 85px;
+}
+
+.progress-bar {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar.three-quarter {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar.one-quarter {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.center-div {
+	margin: 0 auto;
+}
+
+#footer {
+	background-color: #3B5065;
+	height: 25%;
 }
