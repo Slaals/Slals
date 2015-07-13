@@ -44,7 +44,7 @@
             <li class="active"><a href="#">Who am I?</a></li>
             <li><a href="#">Experience</a></li>
             <li><a href="#">Skills</a></li>
-            <li><a href="#">Education</a></li>
+            <!--<li><a href="#">Education</a></li>-->
             <li><a href="#">Really... Who am I?</a></li>
             
           </ul>
@@ -65,7 +65,7 @@
           <div class="row">
             <div class="col-md-9">
               <p class="content-text right-bar">
-                Welcome to my resume site! I am a random guy who likes programming at work and during spare time. I am a full stack developer, I love code structure and design, I always try to produce the most elegant code and beautiful visuals. Thinking about new ideas and solving problems every day are my motivation source, I want to do it with enthousiastic people, the more the merrier!
+                Welcome to my resume site! I'm a random guy who likes programming at work and during spare time. I'm a full stack developer, I love code structure and design, I always try to produce the most elegant code and beautiful visuals. Thinking about new ideas and solving problems every day are my motivation source, I want to do it with enthousiastic people, the more the merrier!
               </p>
             </div>
             <div class="col-md-3">
@@ -73,35 +73,46 @@
             </div>
           </div>
 
-          <div class="row custom-panel dark">
+          <div class="row custom-panel half dark">
             <p class="content-header text-right">I have various interests</p>
             <hr />
 
             <!-- *********************************************** -->
             <div class="row">
               <div class="col-md-3 right-bar">
-                <div class="row no-margin">
-                  <div class="col-md-6 interest-icon greensea">
-                    <span class="fa fa-code fa-2x fa-fw"></span>
-                  </div>
-                  <div class="col-md-6 interest-icon belizehole">
-                    <span class="fa fa-music fa-2x fa-fw"></span>
-                  </div>
-                </div>
-                <div class="row no-margin">
-                  <div class="col-md-6 interest-icon night">
-                    <span class="fa fa-rocket fa-2x fa-fw"></span>
-                  </div>
-                  <div class="col-md-6 interest-icon wisteria">
-                    <span class="fa fa-camera fa-2x fa-fw"></span>
+                <div class="row icons-panel center">
+                  <div class="col-md-4 content center">
+                    <span class="interest-icon active fa fa-code fa-2x fa-fw"></span>
+                    <span class="interest-icon fa fa-rocket fa-2x fa-fw"></span>
+                    <span class="interest-icon fa fa-camera fa-2x fa-fw"></span>
+                    <span class="interest-icon fa fa-music fa-2x fa-fw"></span>
                   </div>
                 </div>
               </div>
-              <div class="col-md-9">
-                <p><span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="content-text">Computer science and programming</span></p>
-                <p><span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="content-text">Music</span></p>
-                <p><span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="content-text">Physics and astronomy</p>
-                <p><span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="content-text">Photography and astrophotography</span></p>
+              <div class="select-interest content-selector col-md-9">
+                <div class="display">
+                  <span class="content-text badge">Computer science and programming</span>
+                  <p class="content-text">
+                    I spend my spare programming and reading things about computer science. When I read something about coding technique or framework I always go ahead and try it by myself. For instance I tried to implemented an Entity Component System after reading <a href="http://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/" target="__blank">this</a>!
+                </div>
+                <div class="hidden">
+                  <span class="content-text badge">Physics and astronomy</span>
+                  <p class="content-text">
+                    I am curious since my youngest age. And the sky was my first curiosity object. This curiosity led me to being into computer science, the sky still being an interest for me, I try to link those two passions. I love reading articles about algorithms for satellite modules or rovers and universe simulation, it's <a href="http://www.deus-consortium.org/a-propos/dark-energy-universe-simulation-full-universe-run/" target="__blank">fascinating</a>!
+                  </p>
+                </div>
+                <div class="hidden">
+                  <span class="content-text badge">Photography and astrophotography</span>
+                  <p class="content-text">
+                    Art is a huge avocation. When I can make art by myself, I do it, even if I'm the only one to like it. It's a powerful communication tool for me, and photography is accessible and in relation with computer science, thanks to numeric photography. I also do <a href="http://noforms.deviantart.com/art/Voie-lactee-384326013" target="__blank">astrophotography</a>, the lens has a power that our brain doesn't have, exposure time.
+                  </p>
+                </div>
+                <div class="hidden">
+                  <span class="content-text badge">Music</span>
+                  <p class="content-text">
+                    I love listening to music while I'm programming. With cinema, music is my favorite art media because there is multiple ways to read into a piece regarding to our background or feelings. Music is also linked with computer science, think about Computer Music. Ray Kurzweil, who is one of the greatest inventors of this century, has <a href="http://www.soundonsound.com/sos/jun07/articles/raykurzweil.htm" target="__blank">worked</a> in this field.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -135,7 +146,7 @@
               <div class="hidden"><p class="content-text smalltext right-text">3 months</p></div>
             </div>
           </div>
-          <div class="row custom-panel dark">
+          <div class="row custom-panel half dark">
             <div class="select-exp content-selector">
               <div class="row display">
                 <div class="col-md-9">
@@ -293,13 +304,15 @@
                 <span class="fa fa-comments-o fa-5x fa-fw"></span>
               </div>
             </div>
-            <div class="col-md-9 right-bar">
-              
+            <div class="col-md-9">
+              <span class="content-text">Je parle <span class="content-text badge">français</span></span><br />
+              <span class="content-text">I speak <span class="content-text badge">English</span></span><br />
+              <span class="content-text">我 说<span class="content-text badge">中文</span></span>
             </div>
             
           </div>
         </div>
-        <div id="education" class="content hidden">
+        <!--<div id="education" class="content hidden">
           <div class="circle">
             <span class="fa fa-graduation-cap fa-5x fa-fw"></span>
           </div>
@@ -339,21 +352,42 @@
               <div class="select-list custom-list content-selector">
                 <div class="select-tech content-selector display">
                   <div class="content-text display">
-                    <p>Concept of the paradigm : Oriented Object Paradigm with Java</p>
+                    <p>Concept of the paradigm : Oriented Object Paradigm</p>
+                    <ul>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Conception methods for OOP : UML</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Java</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Advanced techniques with Java : streaming, exceptions, networking</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Graphics and MVC</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Concurrent computing</li>
+                    </ul>
                   </div>
-                  <div class="hidden">
-                    <p> Tech 2 </p>
+                  <div class="content-text hidden">
+                    <p>Techniques used in web development</p>
+                    <ul>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Web standards : browsers, servers, HTTP/HTTPS, etc.</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Werb documents structure : HTML, XML and CSS</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Client side with JavaScript</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Server side with PHP and Java</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> AJAX and jQuery</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Global variable</li>
+                    </ul>
                   </div>
-                  <div class="hidden">
-                    <p> Tech 3 </p>
+                  <div class="content-text hidden">
+                    <p>Methods for system administration in UNIX environment and administration of virtual infrastructure</p>
+                    <ul>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> User administration and server scripts</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Database with Oracle Database (DBA)</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Standards for virtualization</li>
+                      <li><span class="glyphicon glyphicon-chevron-right"></span> Management of Database in virtual infrastructure</li>
+                    </ul>
                   </div>
-                  <div class="hidden">
-                    <p> Tech 4 </p>
+                  <div class="content-text hidden">
+                    
                   </div>
                 </div>
                 <div class="select-science content-selector hidden">
                   <div class="content-text display">
-                    <p>Fundamental concepts for designing and developing a relational database.</p>
+                    <p>Fundamental concepts for designing and developing a relational database</p>
                     <ul>
                       <li><span class="glyphicon glyphicon-chevron-right"></span> Data model desciption with Entity-Relationship Diagram</li>
                       <li><span class="glyphicon glyphicon-chevron-right"></span> Relational algebra and tuple relational calculus</li>
@@ -365,7 +399,7 @@
                     </ul>
                   </div>
                   <div class="content-text hidden">
-                    <p>Techniques and tools involved in algorithms modelisation.</p>
+                    <p>Techniques and tools involved in algorithms modelisation</p>
                     <ul>
                       <li><span class="glyphicon glyphicon-chevron-right"></span> Computer logic</li>
                       <li><span class="glyphicon glyphicon-chevron-right"></span> Algorithm modelisation for graphs</li>
@@ -375,7 +409,7 @@
                     </ul>
                   </div>
                   <div class="content-text hidden">
-                    <p>Implementation and conception of knowledge base for different fields.</p>
+                    <p>Implementation and conception of knowledge base for different fields</p>
                     <ul>
                       <li><span class="glyphicon glyphicon-chevron-right"></span> Intuitionistic logic</li>
                       <li><span class="glyphicon glyphicon-chevron-right"></span> Horn clause and introduction to Prolog</li>
@@ -385,7 +419,7 @@
                     </ul>
                   </div>
                   <div class="content-text hidden">
-                    <p>Personal project on Data Clustering under the direction of a researcher.</p>
+                    <p>Personal project on Data Clustering under the direction of a researcher</p>
                     <ul>
                       <li><span class="glyphicon glyphicon-chevron-right"></span> Introduction to the fundamental of Data Clustering</li>
                       <li><span class="glyphicon glyphicon-chevron-right"></span> Spectral Clustering</li>
@@ -397,46 +431,18 @@
                   </div>
                 </div>
                 <div class="select-other content-selector hidden">
-                  <div class="display">
-                    <p> Other 1 </p>
-                  </div>
-                  <div class="hidden">
-                    <p> Other 2 </p>
-                  </div>
-                  <div class="hidden">
-                    <p> Other 3 </p>
-                  </div>
-                  <div class="hidden">
-                    <p> Other 4 </p>
-                  </div>
-                  <div class="hidden">
-                    <p> Other 5 </p>
-                  </div>
-                  <div class="hidden">
-                    <p> Other 6 </p>
-                  </div>
-                  <div class="hidden">
-                    <p> Other 7 </p>
-                  </div>
+                  
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
         <div id="information" class="hidden">
           <div class="row icons-panel center" >
-            <div class="col-md-2 pomegranate-dark content center">
+            <div class="col-md-2 content center">
               <a href="https://www.youtube.com/watch?v=VFJCUlGIgic&index=1&list=FLF3ouXqAtacZFC8IGUQIUJA" target="__blank"><span class="fa fa-youtube-play fa-5x fa-fw"></span></a>
-            </div>
-            <div class="col-md-2 greensea-dark content center">
               <a href="http://noforms.deviantart.com/gallery/" target="__blank"><span class="fa fa-deviantart fa-5x fa-fw"></span></a>
-            </div>
-          </div>
-          <div class="row icons-panel center">
-            <div class="col-md-2 belizehole-dark content center">
-              <a href="https://github.com/Slaals" target="__blank"><span class="fa fa-github fa-5x fa-fw"></span></a>
-            </div>
-            <div class="col-md-2 pumpkin-dark content center">
+              <a href="https://git.popcorntime.io/u/Slaals" target="__blank"><span class="fa fa-git fa-5x fa-fw"></span></a>
               <a href="https://soundcloud.com/noforms" target="__blank"><span class="fa fa-soundcloud fa-5x fa-fw"></span></a>
             </div>
           </div>
@@ -452,11 +458,22 @@
       </div>
       <div class="col-md-6">
         <div class="row">
-          <div class="col-md-6 content">
-            <p class="content-text">Jonathan Serra</p>
+          <div class="col-md-5 content">
+            <div class="dark content info left-bar">
+              <span class="glyphicon glyphicon-phone-alt"></span><span class="content-text"> +336.67.31.44.10</span><br /><br />
+              <span class="glyphicon glyphicon-envelope"></span><span class="content-text"> jonathan.serra@utt.fr</span>
+            </div>
           </div>
-          <div class="col-md-6">
-            <p> blublu</p>
+          <div class="col-md-7 content">
+            <div class="content content-text social-panel">
+              <span>Jonathan Serra</span>
+              <div class="left-bar circle">
+                <a href="https://fr.linkedin.com/in/serrajonathan" target="__blank"><span class="fa fa-linkedin fa-fw"></span></a>
+              </div>
+              <div class="right-bar circle">
+                <a href="https://github.com/Slaals" target="__blank"><span class="fa fa-github fa-fw"></span></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

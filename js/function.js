@@ -63,6 +63,12 @@ $(document).ready(function() {
 		$(this).selectContent('.select-other');
 	});
 
+	$('.interest-icon').click(function(e) {
+		$('.interest-icon').removeClass('active');
+		$(this).addClass('active');
+		$(this).selectContent('.select-interest');
+	});
+
 	$.fn.selectContent = function(contentClass) {
 		var index = jQuery(this).index();
 

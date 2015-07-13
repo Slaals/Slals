@@ -74,6 +74,7 @@ html, body {
 }
 
 #main-content {	
+	position: relative;
 	height: 75%;			
 	margin: 0;
 }
@@ -120,6 +121,10 @@ html, body {
 	text-align: center !important;
 }
 
+.half {
+	height: 50%;
+}
+
 .custom-list ul {
 	list-style: none;
 	padding: 0;
@@ -141,6 +146,15 @@ html, body {
 	text-align: center !important;
 }
 
+.text-vcenter {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.content {
+	display: table;
+}
+
 .content .content-text {
 	font-family: Open Sans;
 	font-size: 12pt;
@@ -151,6 +165,22 @@ html, body {
 	text-align: justify;
 	margin-bottom: 30px;
 	padding: 5px;
+}
+
+.content-text > a {
+	text-decoration: none;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 2px;
+}
+
+.content-text > a:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.content.info {
+	height: 100%;
+	border-radius: 5px;
 }
 
 .right-bar {
@@ -172,18 +202,6 @@ html, body {
 .badge {
 	margin: 5px !important;
 	background-color: rgba(0, 0, 0, 0.2);
-}
-
-.interest-icon {
-	padding: 10px;
-	opacity: 0.1;
-	border: 4px #6E6E6F solid;
-}
-
-.interest-icon span {
-	display: block; 
-	width: 1.25em;
-	margin: 0 auto;
 }
 
 .row.custom-panel {
@@ -261,16 +279,17 @@ html, body {
 }
 
 .icons-panel div {
-	margin: 5px;
 	padding: 0;
 	text-align: center;
 }
 
 .icons-panel span {
-	width: 100%;
+	width: 45%;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	cursor: pointer;
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
 }
 
 .icons-panel a {
@@ -278,15 +297,39 @@ html, body {
 	color: white;
 }
 
+.icons-panel > .content {
+	display: inline !important;
+}
+
+.icons-panel .fa-code:hover,
+.icons-panel .fa-code.active {
+	background-color: #23AF95;
+}
+
+.icons-panel .fa-music:hover,
+.icons-panel .fa-music.active {
+	background-color: #3893CA;
+}
+
+.icons-panel .fa-rocket:hover,
+.icons-panel .fa-rocket.active {
+	background-color: #CB4B32;
+}
+
+.icons-panel .fa-camera:hover,
+.icons-panel .fa-camera.active {
+	background-color: #9F58C0;
+}
+
 .icons-panel .fa-youtube-play:hover {
-	background-color: #CC181E;
+	background-color: #CC181E !important;
 }
 
 .icons-panel .fa-deviantart:hover {
 	background-color: #04CC47;
 }
 
-.icons-panel .fa-github:hover {
+.icons-panel .fa-git:hover {
 	background-color: #026291;
 }
 
@@ -372,4 +415,29 @@ html, body {
 #footer {
 	background-color: #3B5065;
 	height: 25%;
+}
+
+.social-panel span {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.social-panel .circle {
+	display: inline-block;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.social-panel .circle > a {
+	text-decoration: none;
+	color: white;
+}
+
+/* Centering */
+.social-panel .circle > a > span {
+	display: inline;
+	vertical-align: middle;
+    line-height: 40px;
 }
