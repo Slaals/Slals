@@ -9,6 +9,10 @@ html, body {
 	overflow: hidden;
 }
 
+span, p {
+	cursor: default;
+}
+
 .navbar {
 	margin: 0;
 	border: none;
@@ -21,6 +25,7 @@ html, body {
 	float: none;
 	vertical-align: top;
 	border: none;
+	height: 100%;
 	opacity: 0.85;
 }
 
@@ -31,6 +36,7 @@ html, body {
 .navbar-default .navbar-nav > li > a:hover, 
 .navbar-default .navbar-nav > li > a:focus {
     color: white;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -58,25 +64,49 @@ html, body {
 	display: table-cell;
 	text-align: right;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 .glyphicon.glyphicon-menu-right {
 	display: table-cell;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 .nav-panel {
 	display: table;
 	opacity: 0.25;
-	cursor: pointer;
 	background-color: white;
-	height: 100%
+	height: 100%;
+	cursor: pointer;
+}
+
+#nav-left span,
+#nav-right span {
+	transform: translate(0, 0);
+	opacity: 0.6;
+
+	-webkit-transition: 0.8s ease;
+    -moz-transition: 0.8s ease;
+    -o-transition: 0.8s ease;
+    transition: 0.8s ease;
+}
+
+#nav-left:hover span {
+	transform: translate(-50px, 0);
+	opacity: 1;
+}
+
+#nav-right:hover span {
+	transform: translate(50px, 0);
+	opacity: 1;
 }
 
 #main-content {	
 	position: relative;
 	height: 75%;			
 	margin: 0;
+	overflow: hidden;
 }
 
 .display {
@@ -90,8 +120,7 @@ html, body {
 .content {
 	color: white;
 	background-color: transparent;
-	padding: 10px 15px 10px 15px;
-	overflow: hidden;
+	padding: 15px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -101,12 +130,44 @@ html, body {
 	margin: 5px 0 15px 0;
 }
 
+.content.half {
+	height: 50%;
+}
+
+.content.half-ten {
+	height: 40%;
+}
+
+.content.third {
+	height: 33%;
+}
+
+.content .center-content {
+	position: relative; 
+	transform: translateY(-50%); 
+	top: 50%;
+}
+
 .content .content-header {
 	font-weight: bold;
 	font-family: Raleway;
 	font-style: normal;
 	font-variant: normal;
-	font-size: 22pt;
+	font-size: 21pt;
+}
+
+#select-panel-exp {
+	display: block;
+	text-align: center;
+	width: 100%;
+	float: bottom;
+}
+
+#select-panel-exp > div {
+	display: inline;
+	width: 30%;
+	border-radius: 5px 5px 0 0;
+	padding: 12px;
 }
 
 .emphasis {
@@ -119,10 +180,6 @@ html, body {
 
 .center-text {
 	text-align: center !important;
-}
-
-.half {
-	height: 50%;
 }
 
 .custom-list ul {
@@ -142,17 +199,9 @@ html, body {
 	cursor: pointer;
 }
 
-.text-center {
-	text-align: center !important;
-}
-
 .text-vcenter {
 	display: table-cell;
 	vertical-align: middle;
-}
-
-.content {
-	display: table;
 }
 
 .content .content-text {
@@ -161,10 +210,9 @@ html, body {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
-	line-height: 25px;
+	line-height: 23px;
 	text-align: justify;
-	margin-bottom: 30px;
-	padding: 5px;
+	padding-right: 10px;
 }
 
 .content-text > a {
@@ -202,11 +250,7 @@ html, body {
 .badge {
 	margin: 5px !important;
 	background-color: rgba(0, 0, 0, 0.2);
-}
-
-.row.custom-panel {
-	padding: 30px 15px 30px 15px; 
-	background-color: transparent;
+	cursor: default;
 }
 
 .dark {
@@ -220,16 +264,6 @@ html, body {
 .smalltext {
 	font-size: 12pt;
 	margin-top: 25px;
-}
-
-.select-pane {
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.2);
-	padding: 10px 0 10px 0;
-	border-radius: 5px 5px 0 0;
-	width: 120px;
-	margin-left: -60px;/*Allows to center the panel*/
-	z-index: 1;
 }
 
 .select-square {
@@ -278,16 +312,24 @@ html, body {
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-.icons-panel div {
-	padding: 0;
-	text-align: center;
+.icons-panel {
+	padding: 15px;
 }
 
-.icons-panel span {
+.icons-panel > div {
+	display: inline !important;
+	padding: 0;
+	text-align: center;
+	float: none;
+}
+
+.icons-panel > div > span,
+.icons-panel > div > a > span {
 	width: 45%;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 10%;
+	padding-bottom: 10%;
 	cursor: pointer;
+	margin-left: 2.5px;
 	margin-top: 2.5px;
 	margin-bottom: 2.5px;
 }
@@ -295,30 +337,27 @@ html, body {
 .icons-panel a {
 	text-decoration: none;
 	color: white;
-}
-
-.icons-panel > .content {
-	display: inline !important;
+	outline: none;
 }
 
 .icons-panel .fa-code:hover,
 .icons-panel .fa-code.active {
-	background-color: #23AF95;
+	background-color: #23AF95 !important;
 }
 
 .icons-panel .fa-music:hover,
 .icons-panel .fa-music.active {
-	background-color: #3893CA;
+	background-color: #3893CA !important;
 }
 
 .icons-panel .fa-rocket:hover,
 .icons-panel .fa-rocket.active {
-	background-color: #CB4B32;
+	background-color: #CB4B32 !important;
 }
 
 .icons-panel .fa-camera:hover,
 .icons-panel .fa-camera.active {
-	background-color: #9F58C0;
+	background-color: #9F58C0 !important;
 }
 
 .icons-panel .fa-youtube-play:hover {
@@ -326,63 +365,31 @@ html, body {
 }
 
 .icons-panel .fa-deviantart:hover {
-	background-color: #04CC47;
+	background-color: #04CC47 !important;
 }
 
 .icons-panel .fa-git:hover {
-	background-color: #026291;
+	background-color: #026291 !important;
 }
 
 .icons-panel .fa-soundcloud:hover {
-	background-color: #FF6600; 
+	background-color: #FF6600 !important; 
 }
 
 .full-height {
 	height: 100%;
 }
 
-.center.row {
-	text-align: center;
-}
-
-.center.content {
-	display: inline-block;
-	float: none;
-}
-
-@media (min-width: 768px ) {
-	.row {
-	 	position: relative;
-	}
-
-	.col-bottom {
-		position: absolute;
-		bottom: 0;
-	}
-
-	.col-center {
-		position: absolute;
-		left: 50%;
-	}
-
-	.col-left {
-		position: absolute;
-		left: 0;
-	}
-
-	.col-right {
-		position: absolute;
-		right: 0;
-	}
-}
-
-.flat-image {
+#profil {
 	border: 5px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo-image {
 	height: auto;
-	width: 175px;
+	width: 10em;
+	max-width: 150px;
+	float: none;
+	margin: 15px;
 }
 
 .progress.vertical {
@@ -414,12 +421,41 @@ html, body {
 
 #footer {
 	background-color: #3B5065;
-	height: 25%;
+	height: 20%;
 }
 
 .social-panel span {
 	padding-right: 10px;
 	padding-left: 10px;
+	cursor: pointer;
+}
+
+#linkedin.circle {
+	border-left: 7px solid rgba(255, 255, 255, 0.1);
+	border-right: 0 solid white;
+}
+
+#linkedin.circle:hover {
+	border-right: 7px solid rgba(25, 133, 188, 0.8);
+	border-left: 0 solid white;
+}
+
+#linkedin.circle:hover span {
+	color: #1985BC;
+}
+
+#github.circle {
+	border-right: 7px solid rgba(255, 255, 255, 0.1);
+	border-left: 0 solid white;
+}
+
+#github.circle:hover {
+	border-left: 7px solid rgba(204, 34, 18, 0.8);
+	border-right: 0 solid white;
+}
+
+#github.circle:hover span {
+	color: #CC2212;
 }
 
 .social-panel .circle {
@@ -428,11 +464,17 @@ html, body {
 	width: 40px;
 	height: 40px;
 	background-color: rgba(0, 0, 0, 0.1);
+
+	-webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    transition: 0.5s linear;
 }
 
 .social-panel .circle > a {
 	text-decoration: none;
 	color: white;
+	outline: none;
 }
 
 /* Centering */
@@ -440,4 +482,22 @@ html, body {
 	display: inline;
 	vertical-align: middle;
     line-height: 40px;
+
+    -webkit-transition: 0.8s linear;
+    -moz-transition: 0.8s linear;
+    -o-transition: 0.8s linear;
+    transition: 0.8s linear;
+}
+
+.extendable.badge {
+	border-radius: 5px 0 0 5px;
+	margin-right: 0 !important;
+	cursor: pointer;
+}
+
+.extend.badge {
+	display: inline-block;
+	border-radius: 0 5px 5px 0;
+	margin-left: -5px !important;
+	background-color: rgba(255, 255, 255, 0.2);
 }

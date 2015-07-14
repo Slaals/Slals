@@ -9,6 +9,32 @@ function pickColor() {
 $(document).ready(function() {
 	var colorPicked = "";
 
+	$('.extend.badge').hide();
+
+	$('.extendable.fr').on('mouseenter', function() {
+		$('.extend.badge.fr').stop();
+		$('.extend.badge.fr').animate({width:'toggle'});
+	}).on('mouseleave', function() {
+		$('.extend.badge.fr').stop();
+		$('.extend.badge.fr').animate({width:'toggle'});
+	});
+	
+	$('.extendable.en').on('mouseenter', function() {
+		$('.extend.badge.en').stop();
+		$('.extend.badge.en').animate({width:'toggle'});
+	}).on('mouseleave', function() {
+		$('.extend.badge.en').stop();
+		$('.extend.badge.en').animate({width:'toggle'});
+	});
+
+	$('.extendable.ch').on('mouseenter', function() {
+		$('.extend.badge.ch').stop();
+		$('.extend.badge.ch').animate({width:'toggle'});
+	}).on('mouseleave', function() {
+		$('.extend.badge.ch').stop();
+		$('.extend.badge.ch').animate({width:'toggle'});
+	});
+
 	$('.nav li').click(function(e) {
 		$(this).navigate();
 	});
@@ -34,7 +60,7 @@ $(document).ready(function() {
 	});
 
 	$('.select-square').click(function(e) {
-		$('.select-pane').children().removeClass('active')
+		$('.select-panel').children().removeClass('active')
 		$(this).addClass('active');
 		$(this).selectContent('.select-exp');
 	});
@@ -43,24 +69,6 @@ $(document).ready(function() {
 		$('.flat-button').removeClass('active');
 		$(this).addClass('active');
 		$(this).selectContent('.select-list')
-	});
-
-	$('.list-science li').click(function(e) {
-		$('.list-science li').removeClass('active');
-		$(this).addClass('active');
-		$(this).selectContent('.select-science');
-	});
-
-	$('.list-tech li').click(function(e) {
-		$('.list-tech li').removeClass('active');
-		$(this).addClass('active');
-		$(this).selectContent('.select-tech');
-	});
-
-	$('.list-other li').click(function(e) {
-		$('.list-other li').removeClass('active');
-		$(this).addClass('active');
-		$(this).selectContent('.select-other');
 	});
 
 	$('.interest-icon').click(function(e) {
