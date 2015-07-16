@@ -4,9 +4,10 @@ nav .navbar.navbar-default {
 	padding: 0;
 }
 
-html, body {
+html, body, .container-fluid {
 	height: 100%;
 	overflow: hidden;
+	padding: 0;
 }
 
 span, p {
@@ -25,7 +26,6 @@ span, p {
 	float: none;
 	vertical-align: top;
 	border: none;
-	height: 100%;
 	opacity: 0.85;
 }
 
@@ -37,12 +37,12 @@ span, p {
 .navbar-default .navbar-nav > li > a:focus {
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .navbar-default .navbar-nav > li > a {
 	color: #AAB2B4;
 	font-family: Open Sans;
-	font-size: 11pt;
 	background-color: #3B5065;
 }
 
@@ -52,12 +52,6 @@ span, p {
 	color: white;
 	background-color: transparent;
 	outline: none;
-}
-
-.glyphicon.glyphicon-menu-left,
-.glyphicon.glyphicon-menu-right {
-	font-size: 12em;
-	color: #C9CED2;
 }
 
 .glyphicon.glyphicon-menu-left {
@@ -77,8 +71,13 @@ span, p {
 	display: table;
 	opacity: 0.25;
 	background-color: white;
-	height: 100%;
 	cursor: pointer;
+	height: 100%;
+}
+
+.nav-panel > span {
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 8em;
 }
 
 #nav-left span,
@@ -93,55 +92,43 @@ span, p {
 }
 
 #nav-left:hover span {
-	transform: translate(-50px, 0);
+	transform: translate(-35px, 0);
 	opacity: 1;
+}
+
+#main {
+	padding-bottom: 170px;
 }
 
 #nav-right:hover span {
-	transform: translate(50px, 0);
+	transform: translate(35px, 0);
 	opacity: 1;
 }
 
-#main-content {	
-	position: relative;
-	height: 75%;			
-	margin: 0;
-	overflow: hidden;
+.main-content {
+	height: 100% !important;
+	overflow-y: auto !important;
+	overflow-x: hidden;
 }
 
 .display {
-	display: block;
+	visibility: visible;
 }
 
 .hidden {
-	display: none;
+	visibility: hidden;
 }
 
 .content {
 	color: white;
 	background-color: transparent;
 	padding: 15px;
-	margin-top: 10px;
-	margin-bottom: 10px;
 }
 
 .content hr {
 	opacity: 0.4;
 	margin: 5px 0 15px 0;
 }
-
-.content.half {
-	height: 50%;
-}
-
-.content.half-ten {
-	height: 40%;
-}
-
-.content.third {
-	height: 33%;
-}
-
 .content .center-content {
 	position: relative; 
 	transform: translateY(-50%); 
@@ -153,7 +140,7 @@ span, p {
 	font-family: Raleway;
 	font-style: normal;
 	font-variant: normal;
-	font-size: 21pt;
+	font-size: large;
 }
 
 #select-panel-exp {
@@ -168,10 +155,11 @@ span, p {
 	width: 30%;
 	border-radius: 5px 5px 0 0;
 	padding: 12px;
+	border: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 .emphasis {
-	font-size: 38pt !important;
+	font-size: xx-large !important;
 }
 
 .right-text {
@@ -206,9 +194,7 @@ span, p {
 
 .content .content-text {
 	font-family: Open Sans;
-	font-size: 12pt;
 	font-style: normal;
-	font-variant: normal;
 	font-weight: 400;
 	line-height: 23px;
 	text-align: justify;
@@ -227,8 +213,8 @@ span, p {
 }
 
 .content.info {
-	height: 100%;
 	border-radius: 5px;
+	border-left: 7px solid rgba(255, 255, 255, 0.1);
 }
 
 .right-bar {
@@ -248,6 +234,7 @@ span, p {
 }
 
 .badge {
+	font-size: medium;
 	margin: 5px !important;
 	background-color: rgba(0, 0, 0, 0.2);
 	cursor: default;
@@ -261,23 +248,25 @@ span, p {
 	line-height: 200px;
 }
 
-.smalltext {
-	font-size: 12pt;
+.small-text {
+	font-size: x-small;
 	margin-top: 25px;
 }
 
 .select-square {
 	cursor: pointer;
+	border-radius: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .select-square.active {
-	color: #545454 !important;
+	color: rgba(0, 0, 0, 0.1);
 }
 
 .circle {
 	border-radius: 50%;
-	width: 125px;
-	height: 125px;
+	width: 10vw;
+	height: 10vw;
 	background-color: rgba(0, 0, 0, 0.1);
 	margin: 5px auto;
 	text-align: center;
@@ -286,7 +275,7 @@ span, p {
 /* Centering */
 .circle > span {
 	display:inline-block;
-    line-height: 120px;
+    line-height: 10vw;
     vertical-align: bottom;
 }
 
@@ -295,7 +284,6 @@ span, p {
 	text-align: center;
 	border-radius: 2px;
 	font-family: Open Sans;
-	font-size: 12pt;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
@@ -377,19 +365,13 @@ span, p {
 }
 
 .full-height {
-	height: 100%;
+	height: 100% !important;
 }
 
 #profil {
 	border: 5px solid rgba(255, 255, 255, 0.2);
-}
-
-.logo-image {
+	width: 10vw;
 	height: auto;
-	width: 10em;
-	max-width: 150px;
-	float: none;
-	margin: 15px;
 }
 
 .progress.vertical {
@@ -421,7 +403,7 @@ span, p {
 
 #footer {
 	background-color: #3B5065;
-	height: 20%;
+	height: 130px;
 }
 
 .social-panel span {
@@ -500,4 +482,41 @@ span, p {
 	border-radius: 0 5px 5px 0;
 	margin-left: -5px !important;
 	background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 992px) {
+	.right-bar {
+		border: none;
+	}
+
+	.left-bar {
+		border: none;
+	}
+
+	.nav-panel > span {
+		font-size: 2em;
+	}
+
+	.icons-panel > div > span,
+	.icons-panel > div > a > span {
+		width: 20%;
+	}	
+
+	.content-text {
+		font-size: x-small;
+	}
+
+	.progress.vertical {
+	    width: 20px;
+	}
+
+	.social-panel .circle {
+		width: 30px;
+		height: 30px;
+	}
+
+	.social-panel .circle > a > span {
+	    line-height: 30px;
+	}
+
 }
