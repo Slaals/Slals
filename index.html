@@ -33,15 +33,14 @@
   </head>
   <body>
     <div class="container-fluid colored" id="main">
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-default hidden-xs">
         <div class="container-fluid">
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav colored">
-              <li class="active"><a>Who am I?</a></li>
-              <li><a>Experience</a></li>
-              <li><a>Skills</a></li>
-              <li><a>Really... Who am I?</a></li>
-              
+              <li>Who am I?</li>
+              <li>Experience</li>
+              <li>Skills</li>
+              <li>Really... Who am I?</li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -53,7 +52,7 @@
             <span class="glyphicon glyphicon-menu-left"></span>
           </div>
           <div class="col-md-6 col-xs-8 full-height select-content content-selector no-padding">
-            <div id="whoami" class="dark hidden main-content">
+            <div id="whoami" class="dark hidden main-content animated">
               <div class="content colored">
                 <p class="content-header emphasis">Hey,</p>
                 <p class="content-header center-text">I am Jonathan “ Slals ” Serra</p>
@@ -119,7 +118,7 @@
               </div>
             </div>
 
-            <div id="experience" class="hidden main-content dark">
+            <div id="experience" class="hidden main-content dark animated">
               <div class="content colored">
                 <div class="select-exp content-selector">
                   <div class="display"><p class="content-header emphasis center-text huge-text">TITANOBEL</p></div>
@@ -237,7 +236,7 @@
                 </div>
               </div>
             </div>
-            <div id="skills" class="hidden main-content">
+            <div id="skills" class="hidden main-content animated">
               <div class="content">
                 <div class="row">
                   <div class="hidden-xs hidden-sm col-md-3 right-bar">
@@ -349,15 +348,13 @@
                 </div>
               </div>
             </div>
-            <div id="information" class="content hidden main-content">
-              <div class="container-fluid">
-                <div class="row icons-panel text-center">
-                  <div class="col-md-4">
-                    <a href="https://www.youtube.com/watch?v=VFJCUlGIgic&index=1&list=FLF3ouXqAtacZFC8IGUQIUJA" target="__blank"><span class="fa fa-youtube-play fa-5x fa-fw pomegranate-dark"></span></a>
-                    <a href="http://noforms.deviantart.com/gallery/" target="__blank"><span class="fa fa-deviantart fa-5x fa-fw greensea-dark"></span></a>
-                    <a href="https://git.popcorntime.io/u/Slaals" target="__blank"><span class="fa fa-git fa-5x fa-fw belizehole-dark"></span></a>
-                    <a href="https://soundcloud.com/noforms" target="__blank"><span class="fa fa-soundcloud fa-5x fa-fw pumpkin-dark"></span></a>
-                  </div>
+            <div id="information" class="hidden main-content animated">
+              <div class="row icons-panel text-center">
+                <div class="col-md-4">
+                  <a href="https://www.youtube.com/watch?v=VFJCUlGIgic&index=1&list=FLF3ouXqAtacZFC8IGUQIUJA" target="__blank"><span class="fa fa-youtube-play fa-5x fa-fw pomegranate-dark"></span></a>
+                  <a href="http://noforms.deviantart.com/gallery/" target="__blank"><span class="fa fa-deviantart fa-5x fa-fw greensea-dark"></span></a>
+                  <a href="https://git.popcorntime.io/u/Slaals" target="__blank"><span class="fa fa-git fa-5x fa-fw belizehole-dark"></span></a>
+                  <a href="https://soundcloud.com/noforms" target="__blank"><span class="fa fa-soundcloud fa-5x fa-fw pumpkin-dark"></span></a>
                 </div>
               </div>
             </div>
@@ -378,8 +375,12 @@
               <div class="row">
                 <div class="col-md-5 col-xs-5 content">
                   <div class="dark content info">
-                    <span class="glyphicon glyphicon-phone-alt"></span><span class="content-text"> +336.67.31.44.10</span><br /><br />
-                    <span class="glyphicon glyphicon-envelope"></span><span class="content-text"> jonathan.serra@utt.fr</span>
+                    <div>
+                      <span class="glyphicon glyphicon-phone-alt"></span><span class="content-text"> +336.67.31.44.10</span>
+                    </div>
+                    <div>
+                      <span class="glyphicon glyphicon-envelope"></span><span class="content-text"> jonathan.serra@utt.fr</span>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-7 col-xs-7 content">
