@@ -22,8 +22,9 @@ span, p {
 .navbar {
 	margin: 0;
 	border: none;
-	background-color: #3B5065;
+	background-color: transparent;
 	border-radius: 0;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar .navbar-nav {
@@ -39,19 +40,25 @@ span, p {
 }
 
 .navbar-default .navbar-nav > li {
-	color: #AAB2B4;
 	font-family: Open Sans;
-	background-color: #3B5065;
+	background-color: transparent;
 	padding-right: 15px;
 	padding-left: 15px;
 	line-height: 50px;
 	cursor: default;
+	transform: translate(0, 50px);
+
+	-webkit-transition: 0.8s ease;
+    -moz-transition: 0.8s ease;
+    -o-transition: 0.8s ease;
+    transition: 0.8s ease;
 }
 
 .navbar-default .navbar-nav > .active {
 	color: white;
-	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.1);
 	outline: none;
+	transform: translate(0, 0);
 }
 
 .glyphicon.glyphicon-menu-left {
@@ -103,8 +110,13 @@ span, p {
 	opacity: 1;
 }
 
+#body {
+	padding-bottom: 100px;
+}
+
 #main {
-	padding-bottom: 170px;
+	height: 100%;
+	padding-bottom: 52px;
 }
 
 #nav-right:hover span {
@@ -251,6 +263,10 @@ span, p {
 	background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
+.text-dark {
+	color: rgba(0, 0, 0, 0.2) !important;
+}
+
 .huge-text {
 	line-height: 200px;
 }
@@ -264,6 +280,16 @@ span, p {
 	cursor: pointer;
 	border-radius: 2px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
+	transform: rotate(0deg);
+
+	-webkit-transition: -webkit-transform 0.8s ease;
+    -moz-transition: -moz-transform 0.8s ease;
+    -o-transition: -o-transform 0.8s ease;
+    transition: transform 0.8s ease;
+}
+
+.select-square:hover {
+	transform: rotate(180deg);
 }
 
 .select-square.active {
@@ -410,7 +436,7 @@ span, p {
 
 #footer {
 	background-color: #3B5065;
-	height: 130px;
+	height: 100px;
 }
 
 .social-panel span {
@@ -554,6 +580,22 @@ span, p {
 		font-size: 4em;
 	}
 
+	#footer {
+		height: 60px;
+	}
+
+	#footer .content > .content {
+		margin-left: 10px;
+	}
+
+	#footer .content {
+		padding: 3px;
+	}
+
+	#body {
+		padding-bottom: 60px;
+	}
+
 	.content-text {
 		font-size: x-small;
 	}
@@ -579,8 +621,25 @@ span, p {
 		padding: 10px;
 	}
 
+	.info > div > .glyphicon,
+	.info > div > .glyphicon > .content-text {
+		font-size: 0.5em;
+	}
+
+	.content-text {
+		font-size: x-small;
+	}
+
 	#footer {
-		height: 80px;
+		height: 60px;
+	}
+
+	#footer .content > .content {
+		margin-left: 10px;
+	}
+
+	#footer .content {
+		padding: 3px;
 	}
 
 	.content-text {
@@ -588,11 +647,23 @@ span, p {
 	}
 
 	.nav-panel > span {
-		font-size: 2em;
+		font-size: 1em;
+	}
+
+	#nav-left {
+		padding: 0;
+	}
+
+	#nav-right {
+		padding: 0;
+	}
+
+	#body {
+		padding-bottom: 60px;
 	}
 
 	#main {
-		padding-bottom: 80px;
+		padding-bottom: 0;
 	}
 
 	.social-panel .circle {
@@ -603,7 +674,6 @@ span, p {
 	.social-panel .circle > a > span {
 	    line-height: 30px;
 	}
-
 
 	.progress.vertical {
 	    width: 20px;
